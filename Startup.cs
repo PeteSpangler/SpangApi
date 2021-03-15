@@ -29,8 +29,8 @@ namespace TodoApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<HabitsContext>(opt =>
-            opt.UseSqlServer(Configuration.GetConnectionString("HabitsContext")));
+            //services.AddDbContext<HabitsContext>(opt =>
+            //opt.UseSqlServer(Configuration.GetConnectionString("HabitsDb")));
 
             services.AddControllers();
 

@@ -3,9 +3,9 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import ListView from "./src/screens/components/list_view";
+import ListView from "./src/screens/components/function_list_view";
 import DetailView from "./src/screens/components/detail_view";
-import ScreenA from "./src/screens/drawer/screenA.js";
+import AddPizzeria from "./src/screens/drawer/addPizzeria.js";
 import ScreenB from "./src/screens/drawer/screenB.js";
 import ScreenC from "./src/screens/drawer/screenC.js";
 import { createDrawerNavigator } from "@react-navigation/drawer";
@@ -13,8 +13,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import TabOne from "./src/screens/tabs/tab1.js";
 import TabTwo from "./src/screens/tabs/tab2.js";
 
-const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
 
 renderTabComponents = () => (
@@ -37,7 +37,7 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator>
         <Drawer.Screen name="Home" children={this.renderScreenComponents} />
-        <Drawer.Screen name="Screen A" component={ScreenA} />
+        <Drawer.Screen name="Add Pizzeria" component={AddPizzeria} />
         <Drawer.Screen name="Screen B" component={ScreenB} />
         <Drawer.Screen name="Screen C" component={ScreenC} />
       </Drawer.Navigator>
